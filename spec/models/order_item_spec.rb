@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe OrderItem, type: :model do
 
   it "should create a new instance with valid attributes" do
