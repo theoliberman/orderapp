@@ -6,5 +6,5 @@ transaction:
   items:
     - sku: "789456"
       amount: 3
-    - sku: "456132"
+    - sku: "456123"
       amount: 1

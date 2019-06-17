@@ -1,6 +1,6 @@
 require "kafka"
 require 'json'
-require 'nokogiri'
+require 'active_support/core_ext/hash'
 require 'yaml'
 
 kafka = Kafka.new(["kafka:29092"], client_id: "orderapp")
@@ -18,15 +18,15 @@ begin
     if type == ".json"
       msg[:data] = JSON.parse(File.read(file))
     elsif type == '.xml'
-      msg[:data] = Nokogiri::XML(file)
+      msg[:data] = Hash.from_xml(file)
     elsif type == '.yml'
-      msg[:data] = YAML.load_file(file).inspect
+      msg[:data] = YAML.load_file(file)
     else
       puts "WRONG FILE TYPE !"
     end
 
     if msg[:data] != ""
-      producer.produce(msg, topic: topic)
+      producer.produce(msg.to_json, topic: topic)
       producer.deliver_messages
     end
 
