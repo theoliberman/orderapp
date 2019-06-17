@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order>
+  <transactionid>1</transactionid>
+  <date>2019-06-12T11:46:08+02:00</date>
+  <buyer>
+    <clientcode>1234</clientcode>
+  </buyer>
+  <items>
+    <item>
+      <itemcode>789456</itemcode>
+      <itemcount>3</itemcount>
+    </item>
+    <item>
+      <itemcode>456123</itemcode>
+      <itemcount>1</itemcount>
+    </item>
+  </items>
+</order>

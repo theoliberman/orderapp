@@ -55,7 +55,7 @@ services:
 
   consumer:
     build: .
-    command: bash -c "bundle exec racecar TestConsumer"
+    command: bash -c "bundle exec racecar OrderConsumer"
     restart: always
     depends_on:
       - ruby
