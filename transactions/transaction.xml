@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <order>
-  <transactionid>1</transactionid>
-  <date>2019-06-12T11:46:08+02:00</date>
+  <transactionid>2</transactionid>
+  <date>2019-06-13T11:46:08+02:00</date>
   <buyer>
-    <clientcode>1234</clientcode>
+    <clientcode>1324</clientcode>
   </buyer>
   <items>
     <item>
-      <itemcode>789456</itemcode>
-      <itemcount>3</itemcount>
+      <itemcode>289456</itemcode>
+      <itemcount>4</itemcount>
     </item>
     <item>
-      <itemcode>456123</itemcode>
-      <itemcount>1</itemcount>
+      <itemcode>367618</itemcode>
+      <itemcount>2</itemcount>
     </item>
   </items>
 </order>

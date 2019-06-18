@@ -1,10 +1,12 @@
 transaction:
-  id: 1
-  date: "2019-06-12T11:46:08+02:00"
+  id: 3
+  date: "2019-07-12T11:46:08+02:00"
   client:
-    id: 1234
+    id: 6718
   items:
-    - sku: "789456"
-      amount: 3
-    - sku: "456123"
+    - sku: "281128"
       amount: 1
+    - sku: "12931"
+      amount: 1
+    - sku: "391831"
+      amount: 3
