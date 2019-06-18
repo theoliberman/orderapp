@@ -1,5 +1,92 @@
 # Exercice Ruby CT-Square
 
+## Installation et Utilisation
+
+ 1. Récupérer les fichiers de l'application  
+ `$ git clone https://github.com/theoliberman/orderapp.git`
+ 2. Créer la base de données  
+ `$ docker-compose run ruby rake db:create db:migrate`
+ 3. Lancer l'application  
+ `$ docker-compose up`
+ 4. Rendez vous sur l'interface GraphIQL  
+ [`http://localhost:3000/graphiql`](http://localhost:3000/graphiql)
+ 5. Exécuter les requêtes    
+    - Lister les transactions
+       ```graphql
+      {
+         orders {
+           order_id
+           date
+           client {
+             client_code
+           }
+           order_items {
+             item {
+               item_code
+             }
+             amount
+           }
+         }
+      }
+     - Récupérer les détails d'une transaction
+       ```graphql
+       {
+         order(orderId: 1) {
+           order_id
+           date
+           client {
+             client_code
+           }
+           order_items {
+             item {
+               item_code
+             }
+             amount
+           }
+         }
+       }
+    - Récupérer l'historique des transactions d'un client
+      ```graphql
+      {
+        client(clientCode: 1234) {
+          orders {
+            order_id
+            date
+            client {
+              client_code
+            }
+            order_items {
+              item {
+                item_code
+              }
+              amount
+            }
+          }
+        }
+      }
+    - Récupérer toutes les commandes qui concernent un produit donné
+      ```graphql
+      {
+        item(itemCode: 789456) {
+          orders {
+            order_id
+            date
+            client {
+              client_code
+            }
+            order_items {
+              item {
+                item_code
+              }
+              amount
+            }
+          }
+        }
+      }
+ 6. Produire une nouvelle transaction à partir d'un fichier (JSON, XML, YML)  
+ `$ docker-compose run ruby ruby producer.rb transactions/transaction.json`
+
+
 ## Introduction
 
 L’objectif de l’exercice est de réaliser un petit projet qui devra :

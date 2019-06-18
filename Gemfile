@@ -16,30 +16,23 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # The ruby implementation of the GraphQL language.
 gem 'graphql'
 
+# A Ruby client library for Apache Kafka
 gem 'ruby-kafka'
-
+# Friendly and easy-to-approach Kafka consumer framework
 gem 'racecar'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Seed data generator
   gem 'faker'
 end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-
   # A development utility to test GraphQL queries.
   gem 'graphiql-rails'
 end
 
 group :test do
-  # Strategies for cleaning databases
-  gem 'database_cleaner', '~> 1.6', '>= 1.6.2'
   # Fixtures replacement with a straightforward definition syntax
   gem 'factory_bot'
   # Testing framework for Ruby on Rails
