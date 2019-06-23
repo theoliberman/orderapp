@@ -33,6 +33,8 @@ group :development do
 end
 
 group :test do
+  # Strategies for cleaning databases
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.2'
   # Fixtures replacement with a straightforward definition syntax
   gem 'factory_bot'
   # Testing framework for Ruby on Rails
