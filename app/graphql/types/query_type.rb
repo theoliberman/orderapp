@@ -9,6 +9,15 @@ module Types
       Order.all
     end
 
+    field :orders_between, [OrderType], null: false do
+      argument :start, String, required: true
+      argument :finish, String, required: true
+    end
+
+    def orders_between(start:, finish:)
+      Order.where(date: DateTime.iso8601(start)..DateTime.iso8601(finish))
+    end
+
     field :order, OrderType, null: false do
       argument :order_id, Int, required: true
     end
