@@ -83,6 +83,23 @@
           }
         }
       }
+    - Récupérer les commandes passées entre deux dates  
+      ```graphql
+      {
+        ordersBetween(start: "2019-04-01", finish: "2019-05-01") {
+          order_id
+          date
+          client {
+            client_code
+          }
+          order_items {
+            item {
+              item_code
+            }
+            amount
+          }
+        }
+      }
  6. Produire une nouvelle transaction à partir d'un fichier (JSON, XML, YML)  
  `$ docker-compose run ruby ruby producer.rb transactions/transaction.json`
 
